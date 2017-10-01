@@ -1,0 +1,11 @@
+{
+  "name": "contract",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:FollowExtension/contract.git",
+  "author": "Steve Chang <iamstevechang@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "zeppelin-solidity": "^1.3.0"
+  }
+}
