@@ -3,8 +3,11 @@ const FollowExtensionTokenCrowdsale = artifacts.require("./FollowExtensionTokenC
 module.exports = function(deployer, network, accounts) {
   const startTime = web3.eth.getBlock(web3.eth.blockNumber).timestamp + 100 // 100 second in the future
   const endTime = startTime + (86400 * 7) // 7 days
-  const rate = new web3.BigNumber(1000)  // 1 ETH = 1000 TOKEN
+  const presaleAmount = 5000000
+  const rate = new web3.BigNumber(875)  // 1 ETH = 875 TOKEN, ethPriceInWon / 400
+  const ethInWei = 1000000000000000000
+  const cap = presaleAmount / rate * ethInWei
   const wallet = accounts[0]
 
-  deployer.deploy(FollowExtensionTokenCrowdsale, 2000000000000000000000, startTime, endTime, rate, wallet)
+  deployer.deploy(FollowExtensionTokenCrowdsale, cap, startTime, endTime, rate, wallet)
 };
