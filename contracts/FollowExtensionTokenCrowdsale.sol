@@ -11,7 +11,7 @@ contract FollowExtensionTokenCrowdsale is CappedCrowdsale {
     CappedCrowdsale(_cap)
     Crowdsale(_startTime, _endTime, _rate, _wallet)
     {
-    token.mint(wallet, 5000000 * 1000000000000000000); // 2,000,000(for team) + 3,000,000(for official sale)
+    token.mint(wallet, 7000000 * 1000000000000000000); // 2,000,000(for team) + 3,000,000(for official sale) + 2,000,000 (for contributors)
   }
 
   function createTokenContract() internal returns (MintableToken) {
